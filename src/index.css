@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* Animación de caída de Sakuras */
+  @keyframes sakura-fall {
+    0% {
+      top: -10%;
+      transform: translateX(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      top: 110%;
+      transform: translateX(100px) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  /* Animación de degradado para el título */
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #fdf4ff;
+  overflow-x: hidden;
+}
+
+/* Clases de utilidad para las animaciones */
+.animate-sakura-fall {
+  animation: sakura-fall linear infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 5s ease infinite;
+}
